@@ -134,4 +134,17 @@ public class SolutionTests
 
         Assert.Throws<ArgumentOutOfRangeException>(() => sut.CombinationSum(candidates, target));
     }
+
+    [Test(Description = "Check behaviour when algorithm called multiple times on the same instance")]
+    public void GivenValidParameters_WhenCombinationSumCalledMultipleTimes_ThenResultsAreSame()
+    {
+        int[] candidates = { 3, 4, 5, 6, 7, 8 };
+        const int target = 30;
+        var sut = new Solution();
+
+        var result1 = sut.CombinationSum(candidates, target);
+        var result2 = sut.CombinationSum(candidates, target);
+        
+        _assertCombinationsEquivalent(result1, result2);
+    }
 }
