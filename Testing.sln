@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rtm_Testing", "rtm_Testing\rtm_Testing.csproj", "{37C6CE8D-BD6D-4BC4-9E61-EBF1EAE46654}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionApi", "SolutionApi\SolutionApi.csproj", "{75E2BB7D-2E27-45C8-94E2-50F579DD7350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionApi.Tests", "SolutionApi.Tests\SolutionApi.Tests.csproj", "{4E291D3B-FF6B-4DDA-A45D-6DD708319EA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37C6CE8D-BD6D-4BC4-9E61-EBF1EAE46654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37C6CE8D-BD6D-4BC4-9E61-EBF1EAE46654}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37C6CE8D-BD6D-4BC4-9E61-EBF1EAE46654}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37C6CE8D-BD6D-4BC4-9E61-EBF1EAE46654}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75E2BB7D-2E27-45C8-94E2-50F579DD7350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75E2BB7D-2E27-45C8-94E2-50F579DD7350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75E2BB7D-2E27-45C8-94E2-50F579DD7350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75E2BB7D-2E27-45C8-94E2-50F579DD7350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E291D3B-FF6B-4DDA-A45D-6DD708319EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E291D3B-FF6B-4DDA-A45D-6DD708319EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E291D3B-FF6B-4DDA-A45D-6DD708319EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E291D3B-FF6B-4DDA-A45D-6DD708319EA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
