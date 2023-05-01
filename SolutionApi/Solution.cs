@@ -32,6 +32,15 @@ public class Solution
 
     public IList<IList<int>> CombinationSum(int[] candidates, int target)
     {
+        if (candidates.Length is < 1 or > 30)
+            throw new ArgumentException("Collection had invalid length", nameof(candidates));
+        if (candidates.Distinct().Count() != candidates.Length)
+            throw new ArgumentException("Collection contained not distinct items", nameof(candidates));
+        if (candidates.Any(item => item is < 2 or > 40))
+            throw new ArgumentOutOfRangeException(nameof(candidates), "Some collection's item is invalid");
+        if (target is < 1 or > 40)
+            throw new ArgumentOutOfRangeException(nameof(target));
+
         _backtrack(0, new List<int>(), 0, candidates, target);
         return _result;
     }
