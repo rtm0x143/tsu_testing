@@ -1,0 +1,26 @@
+@model SolutionApi.ViewModels.SolutionViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Combination Sum Algorithm</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+</head>
+<body>
+<div>
+    @using (Html.BeginForm("Execute", "Solution"))
+    {
+        @Html.EditorForModel()
+        <button type="submit">Execute</button>
+    }
+</div>
+@* <div> *@
+@*     @Html.DisplayFor(model => model.Result) *@
+@* </div> *@
+</body>
+</html>
