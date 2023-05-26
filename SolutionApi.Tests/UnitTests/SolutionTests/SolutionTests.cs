@@ -8,7 +8,7 @@ public class SolutionTests
     [Test(Description = "Checks behaviour if valid arguments are provided")]
     [TestCaseSource(typeof(CombinationSumSources), nameof(CombinationSumSources.ValidTestCaseSource))]
     public void GivenValidParameters_WhenCombinationSumCalled_ThenReturnCorrectResult(
-        CombinationSumSources.SourceType args)
+        CombinationSumSources.Source args)
     {
         var sut = new Solution();
         IList<IList<int>> combinations = null!;
@@ -23,7 +23,7 @@ public class SolutionTests
     [Test(Description = $"Test with invalid {nameof(args.Candidates)} collection length")]
     [TestCaseSource(typeof(CombinationSumSources), nameof(CombinationSumSources.InvalidCandidatesLengthTestCaseSource))]
     public void GivenInvalidCandidatesLength_WhenCombinationSumCalled_ThenThrowsArgumentException(
-        CombinationSumSources.SourceType args)
+        CombinationSumSources.Source args)
     {
         var sut = new Solution();
 
@@ -33,7 +33,7 @@ public class SolutionTests
     [Test(Description = $"Test with invalid {nameof(args.Candidates)} values")]
     [TestCaseSource(typeof(CombinationSumSources), nameof(CombinationSumSources.InvalidCandidatesValuesTestCaseSource))]
     public void GivenInvalidCandidatesValues_WhenCombinationSumCalled_ThenThrowsArgumentOutOfRangeException(
-        CombinationSumSources.SourceType args)
+        CombinationSumSources.Source args)
     {
         var sut = new Solution();
         Assert.Throws<ArgumentOutOfRangeException>(() => sut.CombinationSum(args.Candidates, args.Target));
@@ -43,7 +43,7 @@ public class SolutionTests
     [TestCaseSource(typeof(CombinationSumSources),
         nameof(CombinationSumSources.NotDistinctCandidatesValuesTestCaseSource))]
     public void GivenNotDistinctCandidatesValues_WhenCombinationSumCalled_ThenThrowsArgumentException(
-        CombinationSumSources.SourceType args)
+        CombinationSumSources.Source args)
     {
         var sut = new Solution();
 
@@ -53,7 +53,7 @@ public class SolutionTests
     [Test(Description = $"Test with invalid {nameof(args.Target)} values")]
     [TestCaseSource(typeof(CombinationSumSources), nameof(CombinationSumSources.InvalidTargetValueTestCaseSource))]
     public void GivenInvalidTargetValue_WhenCombinationSumCalled_ThenThrowsArgumentOutOfRangeException(
-        CombinationSumSources.SourceType args)
+        CombinationSumSources.Source args)
     {
         var sut = new Solution();
         Assert.Throws<ArgumentOutOfRangeException>(() => sut.CombinationSum(args.Candidates, args.Target));

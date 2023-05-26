@@ -2,9 +2,9 @@ namespace SolutionApi.Tests.TestCaseSources;
 
 public class CombinationSumSources
 {
-    public record struct SourceType(int[] Candidates, int Target, int[][]? ExpectedResult = null);
+    public record struct Source(int[] Candidates, int Target, int[][]? ExpectedResult = null);
 
-    public static readonly SourceType[] ValidTestCaseSource =
+    public static readonly Source[] ValidTestCaseSource =
     {
         /* Simple cases */
         new(Candidates: new[] { 2, 3, 6, 7 }, Target: 7, ExpectedResult: new[]
@@ -50,25 +50,25 @@ public class CombinationSumSources
         })
     };
 
-    public static readonly SourceType[] InvalidCandidatesLengthTestCaseSource =
+    public static readonly Source[] InvalidCandidatesLengthTestCaseSource =
     {
         new(Candidates: Enumerable.Range(1, 31).ToArray(), Target: 6),
         new(Candidates: Array.Empty<int>(), Target: 6)
     };
 
-    public static readonly SourceType[] InvalidCandidatesValuesTestCaseSource =
+    public static readonly Source[] InvalidCandidatesValuesTestCaseSource =
     {
         new(Candidates: new[] { 1 }, Target: 1), // less than the lower bound
         new(Candidates: new[] { 41 }, Target: 1) // above the upper bound
     };
 
-    public static readonly SourceType[] InvalidTargetValueTestCaseSource =
+    public static readonly Source[] InvalidTargetValueTestCaseSource =
     {
         new(Candidates: new[] { 3 }, Target: 0), // less than the lower bound
         new(Candidates: new[] { 3 }, Target: 41) // above the upper bound
     };
 
-    public static readonly SourceType[] NotDistinctCandidatesValuesTestCaseSource =
+    public static readonly Source[] NotDistinctCandidatesValuesTestCaseSource =
     {
         new(Candidates: new[] { 3, 3 }, Target: 6)
     };

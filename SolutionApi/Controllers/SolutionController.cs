@@ -12,18 +12,7 @@ public class SolutionController : Controller
     {
         if (!ModelState.IsValid) return View("Index");
 
-        var candidates = new List<int>();
-        foreach (var candidate in model.CandidatesSeq.Split(',', ';').Select(s => s.Trim()))
-        {
-            if (!int.TryParse(candidate, out var num))
-            {
-                ModelState.AddModelError(nameof(model.CandidatesSeq),
-                    "Should be string of integers, separated by ',' or '';");
-                return View("Index");
-            }
-
-            candidates.Add(num);
-        }
+        if (!model.TryParseCandidatesSeq(out var candidates)) return View("Index");
 
         using var httpClient = new HttpClient();
         var message = await httpClient.PostAsJsonAsync($"{Request.Scheme}://{Request.Host}/CombinationSum",
